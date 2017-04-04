@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+
+	<context:annotation-config/>
+	<context:component-scan base-package="com.apip">
+	</context:component-scan>
+	<context:property-placeholder location="classpath:apip-forwarder-na.properties"/>
+    <mvc:annotation-driven/>
+    <mvc:resources mapping="/resources/**"  location="resources/" />
+
+  
+	<bean id="appProperties" class="com.apip.util.ApipForwarderProperties">
+        <property name="errorForwardUrl" value="${errorForwardUrl}" />      
+        
+	    <property name="paymentResponsePlugin" value="${paymentResponsePlugin}" />
+        <property name="paymentCancelPlugin" value="${paymentCancelPlugin}" />
+	    <property name="paymentRequestPlugin" value="${paymentRequestPlugin}" />
+        <property name="lightsOutPlugin" value="${lightsOutPlugin}" />
+
+        <property name="paymentRequestCallbacks" value="${paymentRequestCallbacks}" />
+        <property name="paymentResponseCallbacks" value="${paymentResponseCallbacks}" />
+        <property name="paymentCancelCallbacks" value="${paymentCancelCallbacks}" />
+        <property name="lightsOutCallbacks" value="${lightsOutCallbacks}" />
+        
+        <property name="paymentMethodUpdateRequestPlugin" value="${paymentMethodUpdateRequestPlugin}" />
+        <property name="paymentMethodUpdateResponsePlugin" value="${paymentMethodUpdateResponsePlugin}" />
+        <property name="paymentMethodUpdateRequestCallbacks" value="${paymentMethodUpdateRequestCallbacks}" />
+        <property name="paymentMethodUpdateResponseCallbacks" value="${paymentMethodUpdateResponseCallbacks}" />
+        
+        <property name="paymentReturnUrl" value="${paymentReturnUrl}" />
+        <property name="paymentMethodUpdateReturnUrl" value="${paymentMethodUpdateReturnUrl}" />
+        
+        <property name="cybersourcePaymentRequestUrl" value="${cybersourcePaymentRequestUrl}" />
+        <property name="cybersourcePaymentMethodUpdateRequestUrl" value="${cybersourcePaymentMethodUpdateRequestUrl}" />
+        <property name="cybersourceSecretKey" value="${cybersourceSecretKey}" />
+        <property name="cybersourcePaymentRequestSaleRetainUrl" value="${cybersourcePaymentRequestSaleRetainUrl}" />
+    </bean>
+    
+  
+  <bean id="apipSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+    <property name="dataSource" ref="apipDataSource" />
+    <!--<property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />-->
+    <!--<property name="packagesToScan" value="com.apip.forwarder.dao.client.entity.*" />-->
+    <property name="hibernateProperties">
+      <props>
+        <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+        <prop key="hibernate.show.sql">true</prop>
+      </props>
+    </property>
+  </bean>
+
+	<!-- START OF DATABASE CONFIG -->
+	<bean id="apipDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	   <property name="jndiName" value="java:/jdbc/Apip"/>
+	</bean>
+    <bean id="apipPluginDataSource"
+          class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:/jdbc/Apip" />
+    </bean>
+  
+	<bean id="apipTxManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="apipSessionFactory" />
+	</bean>
+
+
+    <bean class="com.apip.forwarder.dao.ApipDaoImpl" id="apipDao">
+        <property name="sessionFactory">
+            <ref bean="apipSessionFactory" />
+        </property>
+    </bean>
+
+    <bean class="com.apip.forwarder.dao.ApipPluginDaoImpl" id="apipPluginDao">
+        <property name="apipPluginDataSource" ref="apipPluginDataSource">
+
+        </property>
+    </bean>
+
+<!-- Internationalization -->
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:messages/message" />
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+
+    </bean>
+
+    <mvc:interceptors>
+        <!-- Changes the locale when a 'lang' request parameter is sent; e.g. /?lang=de -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="locale"/>
+        </bean>
+    </mvc:interceptors>
+</beans>

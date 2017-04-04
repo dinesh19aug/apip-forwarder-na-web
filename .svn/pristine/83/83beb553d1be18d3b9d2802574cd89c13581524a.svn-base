@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+  <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+  <bean id="pluginManager" class="com.apip.forwarder.servlet.plugin.PluginManager" >
+      <property name="appProperties"><ref bean="appProperties" /></property>
+  </bean>
+  <bean id="callbackManager" class="com.apip.forwarder.servlet.plugin.CallbackManager" >
+      <property name="appProperties"><ref bean="appProperties" /></property>
+  </bean>
+
+  <bean id="refreshController" class="com.apip.forwarder.servlet.RefreshController" >
+    <property name="pluginManager"><ref bean="pluginManager" /></property>
+    <property name="callbackManager"><ref bean="callbackManager" /></property>
+    <property name="appProperties"><ref bean="appProperties" /></property>
+  </bean>
+  <bean id="paymentRequestForwarder" class="com.apip.forwarder.servlet.PaymentRequestForwarder" >
+    <property name="pluginManager"><ref bean="pluginManager" /></property>
+    <property name="callbackManager"><ref bean="callbackManager" /></property>
+    <property name="appProperties"><ref bean="appProperties" /></property>
+    <property name="apipDao"><ref bean="apipDao" /></property>
+  </bean>
+  <bean id="paymentResponseForwarder" class="com.apip.forwarder.servlet.PaymentResponseForwarder" >
+    <property name="pluginManager"><ref bean="pluginManager" /></property>
+    <property name="callbackManager"><ref bean="callbackManager" /></property>
+    <property name="appProperties"><ref bean="appProperties" /></property>
+    <property name="apipDao"><ref bean="apipDao" /></property>
+  </bean>
+  <bean id="updatePaymentMethodRequestForwarder" class="com.apip.forwarder.servlet.UpdatePaymentMethodRequestForwarder" >
+    <property name="pluginManager"><ref bean="pluginManager" /></property>
+    <property name="callbackManager"><ref bean="callbackManager" /></property>
+    <property name="appProperties"><ref bean="appProperties" /></property>
+    <property name="apipDao"><ref bean="apipDao" /></property>
+  </bean>
+  <bean id="updatePaymentMethodResponseForwarder" class="com.apip.forwarder.servlet.UpdatePaymentMethodResponseForwarder" >
+    <property name="pluginManager"><ref bean="pluginManager" /></property>
+    <property name="callbackManager"><ref bean="callbackManager" /></property>
+    <property name="appProperties"><ref bean="appProperties" /></property>
+    <property name="apipDao"><ref bean="apipDao" /></property>
+  </bean>
+    <bean id="paymentCancelServlet"  class="com.apip.forwarder.servlet.PaymentCancellationController" >
+        <property name="pluginManager"><ref bean="pluginManager" /></property>
+        <property name="callbackManager"><ref bean="callbackManager" /></property>
+        <property name="appProperties"><ref bean="appProperties" /></property>
+        <property name="apipDao"><ref bean="apipDao" /></property>
+    </bean>
+
+
+  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+     <property name="mappings">
+    <props>
+       <prop key="refresh">refreshController</prop>
+       <prop key="paymentRequest">paymentRequestForwarder</prop>
+       <prop key="paymentResponse">paymentResponseForwarder</prop>
+        <prop key="/paymentCancel.html">paymentCancelServlet</prop>
+       <prop key="updateRequest">updatePaymentMethodRequestForwarder</prop>
+       <prop key="updateResponse">updatePaymentMethodResponseForwarder</prop>
+     </props>
+     </property>
+  </bean>
+
+</beans>
+

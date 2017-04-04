@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<installation version="1.0">
+
+	<info>
+		<appname>@{project.name}</appname>
+		<appversion>@{project.version}</appversion>
+		<authors>
+			<author name="${user.name}" email="rebld@acninc.com" />
+		</authors>
+		
+		<javaversion>@{compileSource}</javaversion>
+	</info>
+
+	<guiprefs width="800" height="600" resizable="yes" />
+
+	<locale>
+		<langpack iso3="eng" />
+	</locale>
+
+	<variables>
+		<variable name="InstallerFrame.logfilePath" value="Default" />
+	</variables>
+
+	<panels>
+		<panel classname="HelloPanel" />
+		<panel classname="TargetPanel" />
+		<panel classname="PacksPanel" />
+		<panel classname="UserInputPanel" id="UserInputPanel.0" />
+		<panel classname="UserInputPanel" id="UserInputPanel.1" />
+		<panel classname="UserInputPanel" id="UserInputPanel.2" />
+        <panel classname="UserInputPanel" id="UserInputPanel.3" />
+		<panel classname="InstallPanel" />
+		<panel classname="FinishPanel" />
+	</panels>
+
+	<resources>
+		<res id="userInputSpec.xml" src="userInputSpec.xml" />
+	</resources>
+
+	<packs>
+
+ 		<pack name="Application" required="no" preselected="yes">
+			<description>This pack will install the application war file n Jboss
+				Deploy folder</description>
+			 <singlefile src="deploy/apip-forwarder-na-web-@{project.version}.war"
+				target="$INSTALL_PATH/deploy/apip-forwarder-na-web.war" override="true" /> 
+		</pack> 
+		<pack name="Configuration" required="no" preselected="yes">
+			<description>This pack will install the configuration files
+			</description>
+			<file src="conf" targetdir="$INSTALL_PATH" override="true" />
+			<parsable targetfile="$INSTALL_PATH/conf/jboss-log4j.xml"
+				type="xml" />
+
+			<file src="conf" targetdir="$INSTALL_PATH" override="true" />
+			<parsable targetfile="$INSTALL_PATH/conf/apip-forwarder-na.properties"
+				type="javaprop" />
+			<parsable targetfile="$INSTALL_PATH/conf/cybersource-MLTEST1.properties"
+				type="javaprop" />
+            <parsable targetfile="$INSTALL_PATH/conf/apip-light-out.properties"
+                      type="javaprop" />
+		</pack>
+
+		<pack name="DataSources" required="no" preselected="yes">
+			<description>This pack will install the data sources in deploy folder
+			</description>
+			 <file src="deploy/apip-ds.xml" targetdir="$INSTALL_PATH/deploy" override="true" />
+			<parsable targetfile="$INSTALL_PATH/deploy/apip-ds.xml"
+				type="xml" /> 
+		</pack>
+
+	</packs>
+
+</installation>

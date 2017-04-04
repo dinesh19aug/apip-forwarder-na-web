@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userInput>
+    <panel order="0">
+        <createForPack name="Configuration" />
+        <field type="title" txt="Jboss Log4j settings" bold="true" />
+        <field type="divider" align="top" />
+
+        <field type="text" variable="log.level">
+            <spec txt="Log Level:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="divider" align="bottom" />
+    </panel>
+    <panel order="1">
+        <createForPack name="Configuration" />
+        <field type="title" txt="Apip forwarder properties settings" bold="true" />
+        <field type="divider" align="top" />
+
+        <field type="text" variable="errorForwardUrl">
+            <spec txt="Error Forward Url" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentRequestPlugin">
+            <spec txt="Payment Request Plugin"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="URL not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentResponsePlugin">
+            <spec txt="paymentResponsePlugin"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentCancelPlugin">
+            <spec txt="paymentCancelPlugin"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="lightsOutPlugin">
+            <spec txt="lightsOutPlugin"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="lightsOutCallbacks">
+            <spec txt="lightsOutCallbacks"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentRequestCallbacks">
+            <spec txt="paymentRequestCallbacks"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentResponseCallbacks">
+            <spec txt="paymentResponseCallbacks"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentCancelCallbacks">
+            <spec txt="paymentCancelCallbacks"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentMethodUpdateRequestPlugin">
+            <spec txt="paymentMethodUpdateRequestPlugin"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentMethodUpdateResponsePlugin">
+            <spec txt="paymentMethodUpdateResponsePlugin"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentMethodUpdateRequestCallbacks">
+            <spec txt="paymentMethodUpdateRequestCallbacks"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentMethodUpdateResponseCallbacks">
+            <spec txt="paymentMethodUpdateResponseCallbacks"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="paymentReturnUrl">
+            <spec txt="paymentReturnUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+
+        <field type="space" />
+        <field type="text" variable="paymentMethodUpdateReturnUrl">
+            <spec txt="paymentMethodUpdateReturnUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="cybersourcePaymentRequestUrl">
+            <spec txt="cybersourcePaymentRequestUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="cybersourcePaymentRequestSaleRetainUrl">
+            <spec txt="cybersourcePaymentRequestSaleRetainUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="cybersourcePaymentMethodUpdateRequestUrl">
+            <spec txt="cybersourcePaymentMethodUpdateRequestUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="cybersourceSecretKey">
+            <spec txt="cybersourceSecretKey"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="app.OEP2.successfulUrl">
+            <spec txt="app.OEP2.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.OEP2.errorUrl">
+            <spec txt="app.OEP2.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.OEP2.cancelUrl">
+            <spec txt="app.OEP2.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.CCPWL.successfulUrl">
+            <spec txt="app.CCPWL.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.CCPWL.errorUrl">
+            <spec txt="app.CCPWL.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.CCPWL.cancelUrl">
+            <spec txt="app.CCPWL.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.CCPVP.successfulUrl">
+            <spec txt="app.CCPVP.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.CCPVP.errorUrl">
+            <spec txt="app.CCPVP.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.CCPVP.cancelUrl">
+            <spec txt="app.CCPVP.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.EXCLLD.successfulUrl">
+            <spec txt="app.EXCLLD.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.EXCLLD.errorUrl">
+            <spec txt="app.EXCLLD.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.EXCLLD.cancelUrl">
+            <spec txt="app.EXCLLD.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.WIMO.successfulUrl">
+            <spec txt="app.WIMO.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.WIMO.errorUrl">
+            <spec txt="app.WIMO.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.WIMO.cancelUrl">
+            <spec txt="app.WIMO.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="app.VOIPCP.successfulUrl">
+            <spec txt="app.VOIPCP.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.VOIPCP.errorUrl">
+            <spec txt="app.VOIPCP.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.VOIPCP.cancelUrl">
+            <spec txt="app.VOIPCP.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="app.DTE.successfulUrl">
+            <spec txt="app.DTE.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.DTE.errorUrl">
+            <spec txt="app.DTE.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.DTECA.successfulUrl">
+            <spec txt="app.DTECA.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.DTECA.errorUrl">
+            <spec txt="app.DTECA.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.WLCP.successfulUrl">
+            <spec txt="app.WLCP.successfulUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.WLCP.errorUrl">
+            <spec txt="app.WLCP.errorUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="app.WLCP.cancelUrl">
+            <spec txt="app.WLCP.cancelUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="interceptCsResponseFlag">
+            <spec txt="interceptCsResponseFlag"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="interceptCsResponseUrl">
+            <spec txt="interceptCsResponseUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="appsAllowedForInterception">
+            <spec txt="appsAllowedForInterception"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="User not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="schemaName">
+            <spec txt="schemaName"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Schema Name not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EntApiUrl">
+            <spec txt="EntApiUrl"  set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="EntApiUrl not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="divider" align="bottom" />
+    </panel>
+
+    <panel order="2">
+        <createForPack name="Configuration" />
+        <field type="title" txt="MLTEST properties" bold="true" />
+        <field type="divider" align="top" />
+        <!-- OEP2 -->
+        <field type="text" variable="OEP2_US_USD_accessKey">
+            <spec txt="OEP2_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="OEP2_US_USD_profileId">
+            <spec txt="OEP2_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="OEP2_US_USD_securityKey">
+            <spec txt="OEP2_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="OEP2_US_USD_merchantId">
+            <spec txt="OEP2_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="OEP2_CA_CAD_accessKey">
+            <spec txt="OEP2_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="OEP2_CA_CAD_profileId">
+            <spec txt="OEP2_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="OEP2_CA_CAD_securityKey">
+            <spec txt="OEP2_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="OEP2_CA_CAD_merchantId">
+            <spec txt="OEP2_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+        <!-- VCP-->
+        <field type="text" variable="VOIPCP_US_USD_accessKey">
+            <spec txt="VOIPCP_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_US_USD_profileId">
+            <spec txt="VOIPCP_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_US_USD_securityKey">
+            <spec txt="VOIPCP_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_US_USD_merchantId">
+            <spec txt="VOIPCP_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_CA_CAD_merchantId">
+            <spec txt="VOIPCP_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_CA_CAD_accessKey">
+            <spec txt="VOIPCP_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_CA_CAD_profileId">
+            <spec txt="VOIPCP_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="VOIPCP_CA_CAD_securityKey">
+            <spec txt="VOIPCP_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <!-- DTE -->
+        <field type="text" variable="DTE_US_USD_accessKey">
+            <spec txt="DTE_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_US_USD_profileId">
+            <spec txt="DTE_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_US_USD_securityKey">
+            <spec txt="DTE_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_US_USD_merchantId">
+            <spec txt="DTE_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_CA_CAD_merchantId">
+            <spec txt="DTE_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="DTE_CA_CAD_accessKey">
+            <spec txt="DTE_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_CA_CAD_profileId">
+            <spec txt="DTE_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_CA_CAD_securityKey">
+            <spec txt="DTE_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+        <!-- DTECA -->
+        <field type="text" variable="DTECA_CA_CAD_accessKey">
+            <spec txt="DTECA_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECA_CA_CAD_profileId">
+            <spec txt="DTECA_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECA_CA_CAD_securityKey">
+            <spec txt="DTECA_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECA_CA_CAD_merchantId">
+            <spec txt="DTECA_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <!-- DTPA-->
+        <field type="text" variable="DTPA_US_USD_accessKey">
+            <spec txt="DTPA_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTPA_US_USD_profileId">
+            <spec txt="DTPA_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTPA_US_USD_securityKey">
+            <spec txt="DTPA_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTPA_US_USD_merchantId">
+            <spec txt="DTPA_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTPA_CA_CAD_merchantId">
+            <spec txt="DTPA_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="DTPA_CA_CAD_accessKey">
+            <spec txt="DTPA_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTPA_CA_CAD_profileId">
+            <spec txt="DTPA_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTE_CA_CAD_securityKey">
+            <spec txt="DTPA_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+        <!-- WLCP-->
+        <field type="text" variable="WLCP_US_USD_accessKey">
+            <spec txt="WLCP_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WLCP_US_USD_profileId">
+            <spec txt="WLCP_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WLCP_US_USD_securityKey">
+            <spec txt="WLCP_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WLCP_US_USD_merchantId">
+            <spec txt="WLCP_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WLCP_CA_CAD_merchantId">
+            <spec txt="WLCP_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="WLCP_CA_CAD_accessKey">
+            <spec txt="WLCP_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WLCP_CA_CAD_profileId">
+            <spec txt="WLCP_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WLCP_CA_CAD_securityKey">
+            <spec txt="WLCP_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+        <!-- EXCLCARE-->
+        <field type="text" variable="EXCLLD_CA_CAD_accessKey">
+            <spec txt="EXCLLD_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EXCLLD_CA_CAD_profileId">
+            <spec txt="EXCLLD_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EXCLLD_CA_CAD_securityKey">
+            <spec txt="EXCLLD_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EXCLLD_CA_CAD_merchantId">
+            <spec txt="EXCLLD_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EXCLNET_CA_CAD_merchantId">
+            <spec txt="EXCLNET_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="EXCLNET_CA_CAD_accessKey">
+            <spec txt="EXCLNET_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EXCLNET_CA_CAD_profileId">
+            <spec txt="EXCLNET_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="EXCLNET_CA_CAD_securityKey">
+            <spec txt="EXCLNET_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <!-- CCPWL -->
+        <field type="text" variable="CCPWL_US_USD_accessKey">
+            <spec txt="CCPWL_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPWL_US_USD_profileId">
+            <spec txt="CCPWL_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPWL_US_USD_securityKey">
+            <spec txt="CCPWL_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPWL_US_USD_merchantId">
+            <spec txt="CCPWL_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPWL_CA_CAD_merchantId">
+            <spec txt="CCPWL_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="CCPWL_CA_CAD_accessKey">
+            <spec txt="CCPWL_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPWL_CA_CAD_profileId">
+            <spec txt="CCPWL_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPWL_CA_CAD_securityKey">
+            <spec txt="CCPWL_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <!-- CCPVP -->
+        <field type="text" variable="CCPVP_US_USD_accessKey">
+            <spec txt="CCPVP_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPVP_US_USD_profileId">
+            <spec txt="CCPVP_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPVP_US_USD_securityKey">
+            <spec txt="CCPVP_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPVP_US_USD_merchantId">
+            <spec txt="CCPVP_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPVP_CA_CAD_merchantId">
+            <spec txt="CCPVP_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="CCPVP_CA_CAD_accessKey">
+            <spec txt="CCPVP_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPVP_CA_CAD_profileId">
+            <spec txt="CCPVP_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="CCPVP_CA_CAD_securityKey">
+            <spec txt="CCPVP_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+        <!-- WIMO -->
+
+        <field type="text" variable="WIMO_US_USD_accessKey">
+            <spec txt="WIMO_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WIMO_US_USD_profileId">
+            <spec txt="WIMO_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WIMO_US_USD_securityKey">
+            <spec txt="WIMO_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WIMO_US_USD_merchantId">
+            <spec txt="WIMO_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WIMO_CA_CAD_merchantId">
+            <spec txt="WIMO_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="WIMO_CA_CAD_accessKey">
+            <spec txt="WIMO_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WIMO_CA_CAD_profileId">
+            <spec txt="WIMO_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="WIMO_CA_CAD_securityKey">
+            <spec txt="WIMO_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+        <!-- DTECCPVP -->
+
+        <field type="text" variable="DTECCPVP_US_USD_accessKey">
+            <spec txt="DTECCPVP_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECCPVP_US_USD_profileId">
+            <spec txt="DTECCPVP_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECCPVP_US_USD_securityKey">
+            <spec txt="DTECCPVP_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECCPVP_US_USD_merchantId">
+            <spec txt="DTECCPVP_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+
+        <field type="text" variable="DTECCPVP_CA_CAD_merchantId">
+            <spec txt="DTECCPVP_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="DTECCPVP_CA_CAD_accessKey">
+            <spec txt="DTECCPVP_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECCPVP_CA_CAD_profileId">
+            <spec txt="DTECCPVP_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECCPVP_CA_CAD_securityKey">
+            <spec txt="DTECCPVP_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <!-- DTECPVOIP -->
+
+        <field type="text" variable="DTECPVOIP_US_USD_accessKey">
+            <spec txt="DTECPVOIP_US_USD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECPVOIP_US_USD_profileId">
+            <spec txt="DTECPVOIP_US_USD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECPVOIP_US_USD_securityKey">
+            <spec txt="DTECPVOIP_US_USD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECPVOIP_US_USD_merchantId">
+            <spec txt="DTECPVOIP_US_USD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+
+        <field type="text" variable="DTECPVOIP_CA_CAD_merchantId">
+            <spec txt="DTECPVOIP_CA_CAD_merchantId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+
+        <field type="text" variable="DTECPVOIP_CA_CAD_accessKey">
+            <spec txt="DTECPVOIP_CA_CAD_accessKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECPVOIP_CA_CAD_profileId">
+            <spec txt="DTECPVOIP_CA_CAD_profileId:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="DTECPVOIP_CA_CAD_securityKey">
+            <spec txt="DTECPVOIP_CA_CAD_securityKey:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="divider" align="bottom" />
+    </panel>
+
+    <panel order="3">
+        <createForPack name="Configuration" />
+        <field type="title" txt="DataSources" bold="true" />
+        <field type="divider" align="top" />
+
+        <field type="text" variable="apip-ds.url">
+            <spec txt="apip-ds.url:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="apip-ds.username">
+            <spec txt="apip-ds.username:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="text" variable="apip-ds.pwd">
+            <spec txt="apip-ds.pwd:" set="" />
+            <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Value not provided" />
+        </field>
+        <field type="space" />
+
+        <field type="divider" align="bottom" />
+    </panel>
+</userInput>

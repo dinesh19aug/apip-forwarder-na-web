@@ -1,0 +1,16 @@
+#French Message
+label.pmtInfo = Information sur le paiement
+label.name=Nom
+label.billing= Adresse de facturation
+label.ccNumber=Numéro de la carte
+label.cvv= CVV
+label.cardType =TYPE DE CARTE
+label.expDate= Date d'expiration
+label.totAmt=Montant total
+label.pay= Cliquez pour payer
+label.cancel = Annuler
+error.invalidCardType = Please enter a credit card number.  We accept Visa, MasterCard, AMEX, and Discover.
+error.invalidCardNum= Invalid credit card number
+error.invalidCvn=Invalid CVN number
+error.invaliddate=Please enter a valid expiration date.
+error.mismatch = Le numéro de carte de crédit que vous avez saisi ne correspond pas au type de carte sélectionné. Veuillez réessayer.

@@ -1,0 +1,16 @@
+#French Message
+label.pmtInfo = INFORMATION SUR LE PAIEMENT
+label.name=NOM
+label.billing= ADRESSE DE FACTURATION
+label.ccNumber=NUMÉRO DE LA CARTE
+label.cvv= CVV
+label.cardType =TYPE DE CARTE
+label.expDate= DATE D'EXPIRATION
+label.totAmt=MONTANT TOTAL
+label.pay= CLIQUEZ POUR PAYER
+label.cancel = ANNULER
+error.invalidCardType = S&apos;il vous plaît entrer un numéro de carte de crédit. Nous acceptons Visa , MasterCard et AMEX.
+error.invalidCardNum= Numéro de carte de crédit invalide
+error.invalidCvn=Numéro CVN non valide
+error.invaliddate=S&apos;il vous plaît entrer une date d&apos;expiration valide.
+error.mismatch = Le numéro de carte de crédit que vous avez saisi ne correspond pas au type de carte sélectionné. Veuillez réessayer.

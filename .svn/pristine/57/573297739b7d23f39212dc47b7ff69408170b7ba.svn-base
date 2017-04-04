@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document
+  xmlns="http://maven.apache.org/changes/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 changes-1.0.0.xsd ">
+  <properties>
+    <title>apip-forwarder-na-plugin Release Notes</title>
+    <author email="ITConfigurationTeam@acninc.com">Software Configuration Management Engineer</author>
+  </properties>
+  <body>
+    <release version="1.8" date="13-Sept-2016" description="Release 1.8">
+          <action dev="dArora" type="update">
+            STR015946 - CS - Silent Order post Enable New Cybersource screen for VCP
+          </action>
+    </release>
+    <release version="1.7.9" date="06-Jul-2016" description="Release 1.7.9">
+          <action dev="dArora" type="update">
+            STR015287 - OEP2-CA Charge the customer using card profile token when customer click on Submit Order on order confirmation page.
+	    STR015408 - Update new CS credit card payment page with french translations for CA OEP2
+	    STR015776 - Enable New CS screen for OEP2 CA 
+          </action>
+    </release>
+    <release version="1.7.8" date="13-Jun-2016" description="Release 1.7.8">
+          <action dev="dArora" type="update">
+            STR015446 - Update the apip-forwarder app to show new CS screen for OEP2 US only
+            STR014275 - Change APIP functionality to start using CS HTTP POST Silent Post listener
+            STR015407 - Update new CS Credit card screen with error messages and Spanish translations
+            STR015149 - OEP2-US Charge the customer using card profile token when customer click on Submit Order on order confirmation page
+            STR015698 - Update OEP2 to save Cybersource UI txns as AUTH in OSS.EPAYTXN
+          </action>
+    </release>
+    <release version="1.7.7" date="08-Jun-2016" description="Release 1.7.7">
+          <action dev="dArora" type="update">
+            STR015446 - Update the apip-forwarder app to show new CS screen for OEP2 US only
+            STR014275 - Change APIP functionality to start using CS HTTP POST Silent Post listener
+            STR015407 - Update new CS Credit card screen with error messages and Spanish translations
+          </action>
+    </release>
+    <release version="1.7.6" date="14-May-2016" description="Release 1.7.6">
+          <action dev="tNoe" type="update">
+              INC0042321 - Cybersource Payment screen returning error
+          </action>
+    </release>
+    <release version="1.7.5" date="02-Mar-2016" description="Release 1.7.5">
+        <action dev="dArora" type="update">
+            STR014717 - Add OEP2 PR in the Cybersource web api
+        </action>
+    </release>
+    <release version="1.7.4" date="24-Aug-2015" description="Release 1.7.4">
+        <action dev="dArora" type="update">
+            INC0028461 - Cybersource not processing payments
+        </action>
+    </release>
+    <release version="1.7.3" date="27-May-2015" description="Release 1.7.3">
+        <action dev="dArora" type="update">
+            STR012896 - Update Cybersource merchant account p12 security key
+        </action>
+    </release>
+    <release version="1.7.2" date="27-May-2015" description="Release 1.7.2">
+        <action dev="dArora" type="update">
+            STR012896 - Update Cybersource merchant account p12 security key
+        </action>
+    </release>
+    <release version="1.7.1" date="08-May-2015" description="Release 1.7.1">
+        <action dev="dArora" type="update">
+            DTE Project Release
+        </action>
+    </release>
+    <release version="1.7" date="25-Nov-2014" description="Release 1.7">
+        <action dev="dArora" type="update">
+            STR011793 - OEP 2.0 CA CyberSource forwarder changes to handle the new module
+        </action>
+    </release>
+    <release version="1.3" date="28-Aug-2013" description="Release 1.3">
+        <action dev="dArora" type="update">
+             BUG001263 - CS: Add 1 Second Timeout for Lights Out
+        </action>
+    </release>
+    <release version="1.2" date="21-Aug-2013" description="Release 1.2">
+        <action dev="dArora" type="update">
+            BUG001247 - CS: E-API Cancelled OSS.EpayTxn not updated correctly
+	    DEV001097 - Turn off CSI Lights Out Software recording whenever CSA is redirected to Cybersource from VCP on behalf of Customer
+        </action>
+    </release>
+    <release version="1.1" date="17-Jul-2013" description="Release 1.1">
+        <action dev="dArora" type="update">
+            FTR001045 - OEP2 System Updates
+        </action>
+    </release>
+    <release version="1.0" date="09-July-2013" description="Release 1.0">
+        <action dev="dArora" type="update">
+		FETR0001042 - CyberSource UI Interface
+        </action>
+    </release>
+  </body>
+</document>

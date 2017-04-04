@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!-- ===================================================================== -->
+  <!--                                                                       -->
+  <!--  JBoss Server Configuration                                           -->
+  <!--                                                                       -->
+  <!-- ===================================================================== -->
+
+  <!-- $Id: oracle-ds.xml 23720 2004-09-15 14:37:40Z loubyansky $ -->
+  <!-- ==================================================================== -->
+  <!--  Datasource config for Oracle originally from Steven Coy             -->
+  <!-- ==================================================================== -->
+
+
+<datasources>
+  <local-tx-datasource>
+    <jndi-name>jdbc/Apip</jndi-name>
+    <new-connection-sql>ALTER SESSION SET CURRENT_SCHEMA = APIP</new-connection-sql> 
+    <connection-url>${apip-ds.url}</connection-url>
+    <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+    <user-name>${apip-ds.username}</user-name>
+    <password>${apip-ds.pwd}</password>
+    <min-pool-size>5</min-pool-size>
+    <max-pool-size>50</max-pool-size>
+    <idle-timeout-minutes>10</idle-timeout-minutes>
+    <exception-sorter-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleExceptionSorter
+    </exception-sorter-class-name>
+    <metadata>
+      <type-mapping>Oracle9i</type-mapping>
+    </metadata>
+  </local-tx-datasource>
+</datasources>

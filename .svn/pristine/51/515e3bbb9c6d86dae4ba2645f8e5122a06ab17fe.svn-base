@@ -1,0 +1,249 @@
+<AutomatedInstallation langpack="eng">
+
+    <com.izforge.izpack.panels.HelloPanel />
+
+    <com.izforge.izpack.panels.TargetPanel>
+        <installpath>/ACN/app/jboss/jboss-apip-na-ui/server/apip-na-ui-1</installpath>
+    </com.izforge.izpack.panels.TargetPanel>
+
+    <com.izforge.izpack.panels.PacksPanel>
+        <pack name="Application" index="0" selected="true" />
+        <pack name="Configuration" index="1" selected="true" />
+        <pack name="DataSources" index="2" selected="true" />
+        <!-- <pack name="Libraries" index="3" selected="true" /> -->
+    </com.izforge.izpack.panels.PacksPanel>
+
+
+    <!-- Jbos-Log4j.xml values-->
+    <com.izforge.izpack.panels.UserInputPanel>
+        <userInput>
+            <entry key="log.level" value="DEBUG" />
+        </userInput>
+    </com.izforge.izpack.panels.UserInputPanel>
+    <!-- Apip-forwarder.properties values-->
+    <com.izforge.izpack.panels.UserInputPanel>
+        <userInput>
+            <entry key="errorForwardUrl" value="http://lx-naqaapip:10080/apip-error.jsp" />
+            <entry key="paymentRequestPlugin" value="com.acn.apip.na.payment.plugin.PaymentRequest" />
+            <entry key="paymentResponsePlugin" value="com.acn.apip.na.payment.plugin.PaymentResponse" />
+            <entry key="paymentCancelPlugin" value="com.acn.apip.na.payment.plugin.PaymentCancel" />
+            <entry key="lightsOutPlugin" value="com.acn.apip.na.payment.plugin.LightsOut" />
+            <entry key="lightsOutCallbacks" value="com.acn.apip.na.payment.callback.lightsout.LightOutCallback" />
+            <entry key="paymentRequestCallbacks" value="com.acn.apip.na.payment.callback.ipn.PaymentRequestIpnCallback" />
+            <entry key="paymentResponseCallbacks" value="com.acn.apip.na.payment.callback.ipn.PaymentResponseIpnCallback" />
+            <entry key="paymentCancelCallbacks" value="com.acn.apip.na.payment.callback.ipn.PaymentCancelIpnCallback" />
+            <entry key="paymentMethodUpdateRequestPlugin" value="com.acn.apip.na.payment.plugin.PaymentMethodUpdateRequest" />
+            <entry key="paymentMethodUpdateResponsePlugin" value="com.acn.apip.na.payment.plugin.PaymentMethodUpdateResponse" />
+            <entry key="paymentMethodUpdateRequestCallbacks" value="com.acn.apip.na.payment.callback.audit.PaymentMethodUpdateRequestAuditCallback" />
+            <entry key="paymentMethodUpdateResponseCallbacks" value="com.acn.apip.na.payment.callback.audit.PaymentMethodUpdateResponseAuditCallback" />
+            <entry key="paymentReturnUrl" value="http://lx-naqaapip:10080/apip-forwarder/paymentresponseforwarder/index.html" />
+            <entry key="paymentMethodUpdateReturnUrl" value="http://lx-naqaapip:10080/apip-forwarder/updatepaymentmethodresponseforwarder/index.html" />
+            <entry key="cybersourcePaymentRequestUrl" value="https://testsecureacceptance.cybersource.com/silent/pay"/>
+            <entry key="cybersourcePaymentMethodUpdateRequestUrl" value="https://testsecureacceptance.cybersource.com/checkout/payment" />
+            <entry key="schemaName" value="APIP" />
+            <entry key="EntApiUrl" value="http://oebackqa.na.acncorp.com/oep2" />
+            <entry key="cybersourceSecretKey" value="5bcdb0f8e05c4787a918169d68502a0ce96ff701921f4d34a743b04429ae9dc199848f7ce07747519202d62c506fe5ea64969b759ad14813a05393dbc1456ac91a0ff99b15414ed9b39cf27edc6ed7403bc596413ae64b3882d9350d81345f1d7c2f580a901b40479fe44b6b5230e2981c9490a0917242ff99e5498e3de0ce09"/>
+            <entry key="app.MYACN.successfulUrl" value="http://lx-naqaapip:10080/apip-success.html" />
+            <entry key="app.MYACN.errorUrl" value="http://lx-naqaapip:10080/apip-error.html" />
+
+            <entry key="app.OEP2.successfulUrl" value="https://oepqa-f5.na.acncorp.com/storefront/checkout-return-cyberSource.ep" />
+            <entry key="app.OEP2.errorUrl" value="https://oepqa-f5.na.acncorp.com/storefront/checkout-return-cyberSource.ep" />
+            <entry key="app.OEP2.cancelUrl" value="https://oepqa-f5.na.acncorp.com/storefront/checkout-return-cyberSource.ep" />
+
+            <entry key="app.OEP2PR.successfulUrl" value="https://oepqapr-f5.na.acncorp.com/storefront/checkout-return-cyberSource.ep" />
+            <entry key="app.OEP2PR.errorUrl" value="https://oepqapr-f5.na.acncorp.com/storefront/checkout-return-cyberSource.ep" />
+            <entry key="app.OEP2PR.cancelUrl" value="https://oepqapr-f5.na.acncorp.com/storefront/checkout-return-cyberSource.ep" />
+
+            <entry key="app.OEPSFCA.successfulUrl" value="https://oepqaca-f5.na.acncorp.com/storefront-ca/checkout-return-cyberSource.ep" />
+            <entry key="app.OEPSFCA.errorUrl" value="https://oepqaca-f5.na.acncorp.com/storefront-ca/checkout-return-cyberSource.ep" />
+            <entry key="app.OEPSFCA.cancelUrl" value="https://oepqaca-f5.na.acncorp.com/storefront-ca/checkout-return-cyberSource.ep" />
+
+            <entry key="app.VOIPCP.successfulUrl" value="http://lx-naqaapps1:9080/VOIPCustomerPortal/cybersourceResponse.do" />
+            <entry key="app.VOIPCP.errorUrl" value="http://lx-naqaapps1:9080/VOIPCustomerPortal/cybersourceResponse.do" />
+            <entry key="app.VOIPCP.cancelUrl" value="http://lx-naqaapps1:9080/VOIPCustomerPortal/cybersourceResponse.do" />
+
+            <entry key="app.DTE.successfulUrl" value="http://qa.myacnphoneservice.com/digitaltalkexpress/preview.cfm?apip=success" />
+            <entry key="app.DTE.errorUrl" value="http://qa.myacnphoneservice.com/digitaltalkexpress/preview.cfm?apip=fail" />
+            <entry key="app.DTE.cancelUrl" value="http://qa.myacnphoneservice.com/digitaltalkexpress/preview.cfm?apip=cancel" />
+
+
+            <entry key="app.DTECA.successfulUrl" value="http://qa.myacnphoneservice.ca/digitaltalkexpress/preview.cfm?apip=success" />
+            <entry key="app.DTECA.errorUrl" value="http://qa.myacnphoneservice.ca/digitaltalkexpress/preview.cfm?apip=fail" />
+            <entry key="app.DTECA.cancelUrl" value="http://qa.myacnphoneservice.ca/digitaltalkexpress/preview.cfm?apip=cancel" />
+
+            <entry key="app.DTEDEV.successfulUrl" value="http://dev.myacnphoneservice.com/digitaltalkexpress/preview.cfm?apip=success" />
+            <entry key="app.DTEDEV.errorUrl" value="http://dev.myacnphoneservice.com/digitaltalkexpress/preview.cfm?apip=fail" />
+            <entry key="app.DTEDEV.cancelUrl" value="http://dev.myacnphoneservice.com/digitaltalkexpress/preview.cfm?apip=cancel" />
+
+            <entry key="app.DTECADEV.successfulUrl" value="http://dev.myacnphoneservice.ca/digitaltalkexpress/preview.cfm?apip=success" />
+            <entry key="app.DTECADEV.errorUrl" value="http://dev.myacnphoneservice.ca/digitaltalkexpress/preview.cfm?apip=fail" />
+            <entry key="app.DTECADEV.cancelUrl" value="http://dev.myacnphoneservice.ca/digitaltalkexpress/preview.cfm?apip=cancel" />
+
+            <entry key="app.WLCP.successfulUrl" value="http://lx-naqaapps1:9080/CustomerPortal/cybersourceResponse.do" />
+            <entry key="app.WLCP.errorUrl" value="http://lx-naqaapps1:9080/CustomerPortal/cybersourceResponse.do" />
+            <entry key="app.WLCP.cancelUrl" value="http://lx-naqaapps1:9080/CustomerPortal/cybersourceResponse.do" />
+
+            <entry key="app.CCPWL.successfulUrl" value="http://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+            <entry key="app.CCPWL.errorUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+            <entry key="app.CCPWL.cancelUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+
+            <entry key="app.CCPVP.successfulUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+            <entry key="app.CCPVP.errorUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+            <entry key="app.CCPVP.cancelUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+
+            <entry key="app.EXCLLD.successfulUrl" value="http://lx-naccptest:9080/XLcareCreditCards/ApipForwarderResponse.do" />
+            <entry key="app.EXCLLD.errorUrl" value="http://lx-naccptest:9080/XLcareCreditCards/ApipForwarderResponse.do" />
+            <entry key="app.EXCLLD.cancelUrl" value="http://lx-naccptest:9080/XLcareCreditCards/ApipForwarderResponse.do" />
+
+            <entry key="app.WIMO.successfulUrl" value="http://ccpqa.na.acncorp.com/OrderStatus/apipForwarderResponse.do" />
+            <entry key="app.WIMO.errorUrl" value="http://ccpqa.na.acncorp.com/OrderStatus/apipForwarderResponse.do" />
+            <entry key="app.WIMO.cancelUrl" value="http://ccpqa.na.acncorp.com/OrderStatus/apipForwarderResponse.do" />
+
+            <entry key="app.DTECCPVP.successfulUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+            <entry key="app.DTECCPVP.errorUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+            <entry key="app.DTECCPVP.cancelUrl" value="https://ccpqa.na.acncorp.com/ccp/apipForwarderResponse.do" />
+
+            <entry key="app.DTECPVOIP.successfulUrl" value="http://lx-naqaapps1:9080/VOIPCustomerPortal/cybersourceResponse.do" />
+            <entry key="app.DTECPVOIP.errorUrl" value="http://lx-naqaapps1:9080/VOIPCustomerPortal/cybersourceResponse.do" />
+            <entry key="app.DTECPVOIP.cancelUrl" value="http://lx-naqaapps1:9080/VOIPCustomerPortal/cybersourceResponse.do" />
+
+            <entry key="interceptCsResponseFlag" value="N" />
+            <entry key="interceptCsResponseUrl" value="http://lx-naqaapip:10080/interceptor.jsp" />
+            <entry key="appsAllowedForInterception" value="OEP2,VOIPCP,WLCP,CCWL,CCP,CCPVP" />
+        </userInput>
+    </com.izforge.izpack.panels.UserInputPanel>
+
+    <!-- Apip-cybersource-MLTEST1.properties values -->
+    <com.izforge.izpack.panels.UserInputPanel>
+        <userInput>
+            <entry key="OEP2_US_USD_accessKey" value="31c36d09053337ee880e8bacfbeebe6c" />
+            <entry key="OEP2_US_USD_profileId" value="NQUSVO1" />
+            <entry key="OEP2_US_USD_securityKey" value="a6dfc198148a4a50801dd49c9ac5f923ce0b854337f34303aa2a5d36e082f871fd306ed489164923a779a5c4937dd2e22e3f68399e3f48a695586707e6e306adcd1d027766e64e6e87d2c47c5ae3e58d3f02633628b34201b29a4c6aa7d7d6f4d5b403034b3645deb0cccb9d219acce1647d474ecb4b4b7cb168b0a73901d7ac"/>
+            <entry key="OEP2_US_USD_merchantId" value="US_VOIP_CPT" />
+
+            <entry key="OEP2PR_US_USD_accessKey" value="31c36d09053337ee880e8bacfbeebe6c" />
+            <entry key="OEP2PR_US_USD_profileId" value="NQUSVO1" />
+            <entry key="OEP2PR_US_USD_securityKey" value="a6dfc198148a4a50801dd49c9ac5f923ce0b854337f34303aa2a5d36e082f871fd306ed489164923a779a5c4937dd2e22e3f68399e3f48a695586707e6e306adcd1d027766e64e6e87d2c47c5ae3e58d3f02633628b34201b29a4c6aa7d7d6f4d5b403034b3645deb0cccb9d219acce1647d474ecb4b4b7cb168b0a73901d7ac"/>
+            <entry key="OEP2PR_US_USD_merchantId" value="US_VOIP_CPT" />
+
+            <entry key="OEPSFCA_CA_CAD_accessKey" value="2e1451c54e993f7da1dfcfa00e29ad39" />
+            <entry key="OEPSFCA_CA_CAD_profileId" value="NQCAVO1" />
+            <entry key="OEPSFCA_CA_CAD_securityKey" value="d8528b32a9694acd8d0b3be1b4f63f8e6b8f05211222431985c8c02115ee5745b58c1a99a39f4b8fac8ead9ca6dfa67cb5b8ef6e5ebd46c29e361135173a8770ec7f2308a8994edbbf6f89b12a370b14206060d3d7104d4e9a44fd75a062ede8f920f6b4b4e048809653749bdcdca30b74f5f688562b4225966cd2ed1e337d03" />
+            <entry key="OEPSFCA_CA_CAD_merchantId" value="CA_VOIP" />
+
+            <entry key="VOIPCP_US_USD_accessKey" value="31c36d09053337ee880e8bacfbeebe6c" />
+            <entry key="VOIPCP_US_USD_profileId" value="NQUSVO1" />
+            <entry key="VOIPCP_US_USD_securityKey" value="a6dfc198148a4a50801dd49c9ac5f923ce0b854337f34303aa2a5d36e082f871fd306ed489164923a779a5c4937dd2e22e3f68399e3f48a695586707e6e306adcd1d027766e64e6e87d2c47c5ae3e58d3f02633628b34201b29a4c6aa7d7d6f4d5b403034b3645deb0cccb9d219acce1647d474ecb4b4b7cb168b0a73901d7ac" />
+            <entry key="VOIPCP_US_USD_merchantId" value="US_VOIP_CPT" />
+
+            <entry key="VOIPCP_CA_CAD_accessKey" value="2e1451c54e993f7da1dfcfa00e29ad39" />
+            <entry key="VOIPCP_CA_CAD_profileId" value="NQCAVO1" />
+            <entry key="VOIPCP_CA_CAD_securityKey" value="d8528b32a9694acd8d0b3be1b4f63f8e6b8f05211222431985c8c02115ee5745b58c1a99a39f4b8fac8ead9ca6dfa67cb5b8ef6e5ebd46c29e361135173a8770ec7f2308a8994edbbf6f89b12a370b14206060d3d7104d4e9a44fd75a062ede8f920f6b4b4e048809653749bdcdca30b74f5f688562b4225966cd2ed1e337d03" />
+            <entry key="VOIPCP_CA_CAD_merchantId" value="CA_VOIP" />
+
+            <entry key="WLCP_US_USD_accessKey" value="2a34f75080b73a928e9d16d9492925da" />
+            <entry key="WLCP_US_USD_profileId" value="NQUSWL1" />
+            <entry key="WLCP_US_USD_securityKey" value="9f782cfef0734010a6f6215fdaf7a3b16325cc6e36b546cdba908c337a921db1ea2fbf4b76ab449fa5f21b42874ef7a678542916f4c244288d096219e36e6d9530453a982fbe4292bf6014b63cd49a5dbcde86dd731a485dbd15ad1c0df8b0b6166f5da7dd5c481e8fc64c9e9f1c5b1481b09f9be4e54762807ff85216d0bfff"/>
+            <entry key="WLCP_US_USD_merchantId" value="US_WIRELINE_CPT" />
+
+            <entry key="WLCP_CA_CAD_accessKey" value="84ce72a462893836804217f97abc256a" />
+            <entry key="WLCP_CA_CAD_profileId" value="NQCAWL1" />
+            <entry key="WLCP_CA_CAD_securityKey" value="b7880c13c1274842bae27c17bd5eed91222e1205947f401189ed92a2dfff23a0a97d736b6a02411a8dec5c0a48629008909c2ceb0bdd48d082890140b18a57f217e7a77ff139463cb0d2d6e0ec2748fff6282c3688d643369a7811bdd1bc33c329946d3e23fb47388fd26d893771b3c7236a6d3153e54989b22ba9a3c2e892f7" />
+            <entry key="WLCP_CA_CAD_merchantId" value="CA_WIRELINE" />
+
+            <entry key="DTE_US_USD_accessKey" value="d041700a1adb334a9960cfae9b5bfce8" />
+            <entry key="DTE_US_USD_profileId" value="NQUSDT1" />
+            <entry key="DTE_US_USD_securityKey" value="0d94149bdc7f4e5c8f068f6bb7505e713d87fab24e1446aa9b0b23e1c1c308edf2654835d0594338a1bbeccad4df2f599c57e3e2040e41c7b7f989344df9e824cca37eb8b9c444a2ab7f30d7903eb93377b10eca3bd9468dbb1ba4a4310614fff5672d9a83714d86a06a754bab221d93bf1ca51b2e2d40cf8a09e0b32fa1d36a" />
+            <entry key="DTE_US_USD_merchantId" value="US_DTE_CPT" />
+
+            <entry key="DTECA_CA_CAD_accessKey" value="69b1a419e350399cbb7ae5093f0416ef" />
+            <entry key="DTECA_CA_CAD_profileId" value="NQCADT1" />
+            <entry key="DTECA_CA_CAD_securityKey" value="68cfb35bf00a4407bb0aa9234718f50f2c41324d8d6345c98d488a40931d8c709eac071b461345a084922dd61fd8924c16c5d37fa0524aa18dec3e9f7f89b57e7e7ddfdedf48466d97fd7de217ea5aea0b7f411d190e451a9fbf096efcd031d0018f984971204674aab78ac07b8b5ec8e9123608e52f4acfb2b25b4139a28b09" />
+            <entry key="DTECA_CA_CAD_merchantId" value="CA_DTE" />
+
+            <entry key="DTE_BETA_US_USD_accessKey" value="d041700a1adb334a9960cfae9b5bfce8" />
+            <entry key="DTE_BETA_US_USD_profileId" value="NQUSDT1" />
+            <entry key="DTE_BETA_US_USD_securityKey" value="0d94149bdc7f4e5c8f068f6bb7505e713d87fab24e1446aa9b0b23e1c1c308edf2654835d0594338a1bbeccad4df2f599c57e3e2040e41c7b7f989344df9e824cca37eb8b9c444a2ab7f30d7903eb93377b10eca3bd9468dbb1ba4a4310614fff5672d9a83714d86a06a754bab221d93bf1ca51b2e2d40cf8a09e0b32fa1d36a" />
+            <entry key="DTE_BETA_US_USD_merchantId" value="US_DTE_CPT" />
+
+            <entry key="DTECA_BETA_CA_CAD_accessKey" value="69b1a419e350399cbb7ae5093f0416ef" />
+            <entry key="DTECA_BETA_CA_CAD_profileId" value="NQCADT1" />
+            <entry key="DTECA_BETA_CA_CAD_securityKey" value="68cfb35bf00a4407bb0aa9234718f50f2c41324d8d6345c98d488a40931d8c709eac071b461345a084922dd61fd8924c16c5d37fa0524aa18dec3e9f7f89b57e7e7ddfdedf48466d97fd7de217ea5aea0b7f411d190e451a9fbf096efcd031d0018f984971204674aab78ac07b8b5ec8e9123608e52f4acfb2b25b4139a28b09" />
+            <entry key="DTECA_BETA_CA_CAD_merchantId" value="CA_DTE" />
+
+            <entry key="EXCLLD_CA_CAD_accessKey" value="adfcde8fbe423fce98bea4dc1cf33f3f" />
+            <entry key="EXCLLD_CA_CAD_profileId" value="NQCAXL1" />
+            <entry key="EXCLLD_CA_CAD_securityKey" value="198e98829bd54614814c89d4e7af6ec9f9754dd9701d4e2f9b36e7d83df1c848e286e8b3707149269ca674f59fb6d6d1fd162ced4e3649c08a15e62f72847387a6506add7bd04ca18e077646f12ab87bf1e1566e94cc45688b9db3889edac07ad5427413ef6c400cb376d21241ff4df33977b2d531854ab4aff08c1c3cdf382f" />
+            <entry key="EXCLLD_CA_CAD_merchantId" value="CA_EXCLLD" />
+
+            <entry key="EXCLNET_CA_CAD_accessKey" value="64fcc3204b2e34989cd4c1370e80c1ca" />
+            <entry key="EXCLNET_CA_CAD_profileId" value="NTCAXI1" />
+            <entry key="EXCLNET_CA_CAD_securityKey" value="c50ce6ccd96946be9c7e216c99fcca08f82f0ac1c95b4a7a943e32a72bd083cf79221e8334d842b298490d7e889e75c3b75ee839d9e14e82b9a0009612cbfc0cf846e12206a548a898b1c95e43e0423237854fca90cd4bfb84bef4a6f86901a0c3b005c68a8c47278064f3b919ae0baa1ee5aa62374343178d684a82aefd1068" />
+            <entry key="EXCLNET_CA_CAD_merchantId" value="CA_EXCLINET" />
+
+            <entry key="CCPWL_US_USD_accessKey" value="2a34f75080b73a928e9d16d9492925da" />
+            <entry key="CCPWL_US_USD_profileId" value="NQUSWL1" />
+            <entry key="CCPWL_US_USD_securityKey" value="9f782cfef0734010a6f6215fdaf7a3b16325cc6e36b546cdba908c337a921db1ea2fbf4b76ab449fa5f21b42874ef7a678542916f4c244288d096219e36e6d9530453a982fbe4292bf6014b63cd49a5dbcde86dd731a485dbd15ad1c0df8b0b6166f5da7dd5c481e8fc64c9e9f1c5b1481b09f9be4e54762807ff85216d0bfff"/>
+            <entry key="CCPWL_US_USD_merchantId" value="US_WIRELINE_CPT" />
+
+            <entry key="CCPWL_CA_CAD_accessKey" value="84ce72a462893836804217f97abc256a" />
+            <entry key="CCPWL_CA_CAD_profileId" value="NQCAWL1" />
+            <entry key="CCPWL_CA_CAD_securityKey" value="b7880c13c1274842bae27c17bd5eed91222e1205947f401189ed92a2dfff23a0a97d736b6a02411a8dec5c0a48629008909c2ceb0bdd48d082890140b18a57f217e7a77ff139463cb0d2d6e0ec2748fff6282c3688d643369a7811bdd1bc33c329946d3e23fb47388fd26d893771b3c7236a6d3153e54989b22ba9a3c2e892f7" />
+            <entry key="CCPWL_CA_CAD_merchantId" value="CA_WIRELINE" />
+
+            <entry key="CCPVP_US_USD_accessKey" value="31c36d09053337ee880e8bacfbeebe6c" />
+            <entry key="CCPVP_US_USD_profileId" value="NQUSVO1" />
+            <entry key="CCPVP_US_USD_securityKey" value="a6dfc198148a4a50801dd49c9ac5f923ce0b854337f34303aa2a5d36e082f871fd306ed489164923a779a5c4937dd2e22e3f68399e3f48a695586707e6e306adcd1d027766e64e6e87d2c47c5ae3e58d3f02633628b34201b29a4c6aa7d7d6f4d5b403034b3645deb0cccb9d219acce1647d474ecb4b4b7cb168b0a73901d7ac" />
+            <entry key="CCPVP_US_USD_merchantId" value="US_VOIP_CPT" />
+
+            <entry key="CCPVP_CA_CAD_accessKey" value="2e1451c54e993f7da1dfcfa00e29ad39" />
+            <entry key="CCPVP_CA_CAD_profileId" value="NQCAVO1" />
+            <entry key="CCPVP_CA_CAD_securityKey" value="d8528b32a9694acd8d0b3be1b4f63f8e6b8f05211222431985c8c02115ee5745b58c1a99a39f4b8fac8ead9ca6dfa67cb5b8ef6e5ebd46c29e361135173a8770ec7f2308a8994edbbf6f89b12a370b14206060d3d7104d4e9a44fd75a062ede8f920f6b4b4e048809653749bdcdca30b74f5f688562b4225966cd2ed1e337d03" />
+            <entry key="CCPVP_CA_CAD_merchantId" value="CA_VOIP" />
+
+            <entry key="WIMO_US_USD_accessKey" value="31c36d09053337ee880e8bacfbeebe6c" />
+            <entry key="WIMO_US_USD_profileId" value="NQUSVO1" />
+            <entry key="WIMO_US_USD_securityKey" value="a6dfc198148a4a50801dd49c9ac5f923ce0b854337f34303aa2a5d36e082f871fd306ed489164923a779a5c4937dd2e22e3f68399e3f48a695586707e6e306adcd1d027766e64e6e87d2c47c5ae3e58d3f02633628b34201b29a4c6aa7d7d6f4d5b403034b3645deb0cccb9d219acce1647d474ecb4b4b7cb168b0a73901d7ac" />
+            <entry key="WIMO_US_USD_merchantId" value="US_VOIP_CPT" />
+
+            <entry key="WIMO_CA_CAD_accessKey" value="2e1451c54e993f7da1dfcfa00e29ad39" />
+            <entry key="WIMO_CA_CAD_profileId" value="NQCAVO1" />
+            <entry key="WIMO_CA_CAD_securityKey" value="d8528b32a9694acd8d0b3be1b4f63f8e6b8f05211222431985c8c02115ee5745b58c1a99a39f4b8fac8ead9ca6dfa67cb5b8ef6e5ebd46c29e361135173a8770ec7f2308a8994edbbf6f89b12a370b14206060d3d7104d4e9a44fd75a062ede8f920f6b4b4e048809653749bdcdca30b74f5f688562b4225966cd2ed1e337d03" />
+            <entry key="WIMO_CA_CAD_merchantId" value="CA_VOIP" />
+
+            <entry key="DTECCPVP_US_USD_accessKey" value="d041700a1adb334a9960cfae9b5bfce8" />
+            <entry key="DTECCPVP_US_USD_profileId" value="NQUSDT1" />
+            <entry key="DTECCPVP_US_USD_securityKey" value="0d94149bdc7f4e5c8f068f6bb7505e713d87fab24e1446aa9b0b23e1c1c308edf2654835d0594338a1bbeccad4df2f599c57e3e2040e41c7b7f989344df9e824cca37eb8b9c444a2ab7f30d7903eb93377b10eca3bd9468dbb1ba4a4310614fff5672d9a83714d86a06a754bab221d93bf1ca51b2e2d40cf8a09e0b32fa1d36a"/>
+            <entry key="DTECCPVP_US_USD_merchantId" value="US_DTE_CPT" />
+
+            <entry key="DTECCPVP_CA_CAD_accessKey" value="69b1a419e350399cbb7ae5093f0416ef" />
+            <entry key="DTECCPVP_CA_CAD_profileId" value="NQCADT1" />
+            <entry key="DTECCPVP_CA_CAD_securityKey" value="68cfb35bf00a4407bb0aa9234718f50f2c41324d8d6345c98d488a40931d8c709eac071b461345a084922dd61fd8924c16c5d37fa0524aa18dec3e9f7f89b57e7e7ddfdedf48466d97fd7de217ea5aea0b7f411d190e451a9fbf096efcd031d0018f984971204674aab78ac07b8b5ec8e9123608e52f4acfb2b25b4139a28b09" />
+            <entry key="DTECCPVP_CA_CAD_merchantId" value="CA_DTE" />
+
+            <entry key="DTECPVOIP_US_USD_accessKey" value="d041700a1adb334a9960cfae9b5bfce8" />
+            <entry key="DTECPVOIP_US_USD_profileId" value="NQUSDT1" />
+            <entry key="DTECPVOIP_US_USD_securityKey" value="0d94149bdc7f4e5c8f068f6bb7505e713d87fab24e1446aa9b0b23e1c1c308edf2654835d0594338a1bbeccad4df2f599c57e3e2040e41c7b7f989344df9e824cca37eb8b9c444a2ab7f30d7903eb93377b10eca3bd9468dbb1ba4a4310614fff5672d9a83714d86a06a754bab221d93bf1ca51b2e2d40cf8a09e0b32fa1d36a"/>
+            <entry key="DTECPVOIP_US_USD_merchantId" value="US_DTE_CPT" />
+
+            <entry key="DTECPVOIP_CA_CAD_accessKey" value="69b1a419e350399cbb7ae5093f0416ef" />
+            <entry key="DTECPVOIP_CA_CAD_profileId" value="NQCADT1" />
+            <entry key="DTECPVOIP_CA_CAD_securityKey" value="68cfb35bf00a4407bb0aa9234718f50f2c41324d8d6345c98d488a40931d8c709eac071b461345a084922dd61fd8924c16c5d37fa0524aa18dec3e9f7f89b57e7e7ddfdedf48466d97fd7de217ea5aea0b7f411d190e451a9fbf096efcd031d0018f984971204674aab78ac07b8b5ec8e9123608e52f4acfb2b25b4139a28b09" />
+            <entry key="DTECPVOIP_CA_CAD_merchantId" value="CA_DTE" />
+        </userInput>
+    </com.izforge.izpack.panels.UserInputPanel>
+
+    <!-- Database values -->
+    <com.izforge.izpack.panels.UserInputPanel>
+        <userInput>
+            <entry key="apip-ds.url" value="jdbc:oracle:thin:@dbsrvossqa:1521:ossqa" />
+            <entry key="apip-ds.username" value="APP_NA_APIPUI" />
+            <entry key="apip-ds.pwd" value="UirHB9szkY" />
+
+        </userInput>
+    </com.izforge.izpack.panels.UserInputPanel>
+
+    <com.izforge.izpack.panels.InstallPanel />
+
+    <com.izforge.izpack.panels.FinishPanel />
+</AutomatedInstallation>

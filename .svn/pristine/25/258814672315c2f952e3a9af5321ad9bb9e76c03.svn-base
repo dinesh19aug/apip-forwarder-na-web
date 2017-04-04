@@ -1,0 +1,16 @@
+#messages in English
+label.pmtInfo = PAYMENT INFORMATION
+label.name=NAME
+label.billing= BILLING ADDRESS
+label.ccNumber= CARD NUMBER
+label.cardType = CARD TYPE
+label.cvv=CARD CVN
+label.expDate= EXPIRATION DATE
+label.totAmt=TOTAL AMOUNT
+label.pay= Click To Pay
+error.invalidCardType = Please enter a credit card number.  We accept Visa, MasterCard, AMEX, and Discover.
+error.invalidCardNum= Invalid credit card number
+error.invalidCvn=Invalid CVN number
+error.invaliddate=Please enter a valid expiration date.
+label.cancel = Cancel
+error.mismatch = The credit card number you entered does not match the card type selected. Please try again.
