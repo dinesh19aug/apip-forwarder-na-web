@@ -48,7 +48,7 @@
    </scm>
    <properties>
    	<relative.path>customer/payment/webapps/apip-forwarder-na-web</relative.path>
-    <spring.version>3.2.16.RELEASE</spring.version>
+    <spring.version>5.2.6.RELEASE</spring.version>
   </properties>
   <dependencies>
     <dependency>
